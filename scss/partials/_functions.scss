@@ -1,0 +1,29 @@
+@use "sass:math";
+
+$num1: 100;
+$num2: 2;
+
+@debug math.is-unitless($num1 and $num2);
+
+@function calculate($num1, $num2, $action) {
+     @if $action =='m' {
+        $result:$num1 * $num2;
+        @return $result +px;
+
+    } @else if $action =='dz' {
+        $result: math.div($num1, $num2);
+        @return math.round($result)+px;
+
+    } @else if $action == 'o' {
+        $result: $num1 - $num2;
+        @return $result + px;
+
+    } @else if $action == 'd' {
+        $result: $num1 + $num2;
+        @return $result +px;
+    }
+    }
+
+    div {
+        width: calculate($num1, $num2, 'd');
+    }

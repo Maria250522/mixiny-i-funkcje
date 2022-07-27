@@ -1,0 +1,15 @@
+@mixin border ($border-color, $border-width, $border-style) {
+    border-color: $border-color;
+    border-width: $border-width;
+    border-style: $border-style;
+    
+}
+
+div{
+    // tu mam problem, jak nie wpiszę argumenty to Git wyrzuca mi błąd
+    @include border(red, 1px, solid);
+}
+
+div:nth-of-type(2){
+    @include border(yellow, 7px, dashed); 
+}

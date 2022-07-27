@@ -1,0 +1,17 @@
+div {
+  border-color: red;
+  border-width: 1px;
+  border-style: solid;
+}
+
+div:nth-of-type(2) {
+  border-color: yellow;
+  border-width: 7px;
+  border-style: dashed;
+}
+
+div {
+  width: 102px;
+}
+
+/*# sourceMappingURL=style.css.map */
